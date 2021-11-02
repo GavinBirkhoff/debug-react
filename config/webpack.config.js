@@ -334,6 +334,16 @@ module.exports = function (webpackEnv) {
           'scheduler/tracing': 'scheduler/tracing-profiling',
         }),
         ...(modules.webpackAliases || {}),
+        ...(false||{
+          'react': path.resolve(__dirname, '../src/packages/react/packages/react'),
+          'react-dom': path.resolve(__dirname, '../src/packages/react/packages/react-dom'),
+          'shared': path.resolve(__dirname, '../src/packages/react/packages/shared'),
+          'react-reconciler': path.resolve(__dirname, '../src/packages/react/packages/react-reconciler'),
+          "legacy-events": path.resolve(__dirname, "../src/packages/react/packages/legacy-events"),
+          // 'react-events': path.resolve(__dirname, '../src/packages/react/packages/events'),
+          // scheduler: path.resolve(__dirname, "../src/packages/react/packages/scheduler"),
+        })
+        
       },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding
