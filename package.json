@@ -4,7 +4,7 @@
   "description": "debug react",
   "main": "index.js",
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "cross-env DISABLE_ESLINT_PLUGIN='true' node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"
   },
@@ -158,5 +158,11 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "eslint-plugin-no-for-of-loops": "^1.0.1",
+    "eslint-plugin-no-function-declare-after-return": "^1.1.0",
+    "eslint-plugin-react-internal": "0.0.1-security"
   }
 }
